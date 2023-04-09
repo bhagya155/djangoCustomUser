@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+{% block title %}loginview{% endblock title %}
+{% block body %}
+
+<div class="container my-4">
+<form method="post" >
+  {% csrf_token %}
+    {% comment %} <div class="mb-3">
+      <label for="firstname" class="form-label">First Name :</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="first name" required>
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Last Name : </label>
+      <input type="text" class="form-control" id="lastname" name="lastname"  placeholder="last name" required >
+    </div> {% endcomment %}
+    <div class="mb-1">
+      <label  class="form-label">Username :</label>
+      {{ form.username }}
+    </div>
+    
+    <div class="mb-1">
+      <label  class="form-label">Password :</label>
+      {{ form.password }}
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+{% endblock body %}

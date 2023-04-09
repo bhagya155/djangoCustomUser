@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% block title %}registration page{% endblock title %}
+{% block body %}
+
+<div class="container">
+<form method="post" >
+  {% csrf_token %}
+    {% comment %} <div class="mb-3">
+      <label for="firstname" class="form-label">First Name :</label>
+      <input type="text" class="form-control" id="firstname" name="firstname" placeholder="first name" required>
+    </div>
+    <div class="mb-3">
+      <label for="lastname" class="form-label">Last Name : </label>
+      <input type="text" class="form-control" id="lastname" name="lastname"  placeholder="last name" required >
+    </div> {% endcomment %}
+    <div class="mb-1">
+      <label  class="form-label">Username :</label>
+      {{ form.username }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label">First Name :</label>
+      {{ form.first_name }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label">Lastname :</label>
+      {{ form.last_name }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label">Email address :</label>
+      {{ form.email }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label"> Address :</label>
+      {{ form.address }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label">Choose Password :</label>
+      {{ form.password1 }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label">Confirm Password :</label>
+      {{ form.password2 }}
+    </div>
+    <div class="form-check">
+        
+        <label class="form-check-label" for="flexCheckDefault">
+          Doctor  {{ form.is_doctor }}
+        </label>
+      </div>
+      <div class="form-check">
+        
+        <label class="form-check-label" for="flexCheckDefault">
+          Patient {{ form.is_patient }}
+        </label>
+      </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
+{% endblock body %}

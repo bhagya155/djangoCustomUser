@@ -1,0 +1,32 @@
+{% extends 'index.html' %}
+{% block title %}Doctors page{% endblock title %}
+
+{% block body %}
+
+<div class="container mx-4 my-4">
+    <h3>Doctors Information</h3>
+    <div class="card" style="width: 18rem;">
+        
+        <div class="card-body">
+          <h5 class="card-title">Wellcome {{ user.username }}</h5>
+          <div class="row">
+            <div class="col">Name: {{ user.first_name }} {{ user.last_name }} </div>
+            
+        </div>
+        <div class="row">
+            <div class="col">Email: {{ user.email }}</div>
+            
+        </div>
+        <div class="row">
+            <div class="col">Address: {{ user.address }}</div>
+        </div>
+          
+        </div>
+      </div>
+
+
+
+
+    
+
+{% endblock body %}
