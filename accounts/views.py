@@ -34,7 +34,7 @@ def loginview(request):
 def register(request):
     msg = None
     if request.method == 'POST':
-        form = SignUpForm(request.POST)
+        form = SignUpForm(request.POST,request.FILES)
         
         if form.is_valid():
             user = form.save()

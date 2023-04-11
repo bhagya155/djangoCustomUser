@@ -11,6 +11,8 @@ class User(AbstractUser):
 
     address = models.CharField(max_length=150)
 
+    profilepic = models.ImageField(upload_to="images")
+
     objects = UserManager
 
     

@@ -3,7 +3,7 @@
 {% block body %}
 
 <div class="container">
-<form method="post" >
+<form method="post" enctype="multipart/form-data" >
   {% csrf_token %}
     {% comment %} <div class="mb-3">
       <label for="firstname" class="form-label">First Name :</label>
@@ -32,6 +32,10 @@
     <div class="mb-1">
       <label  class="form-label"> Address :</label>
       {{ form.address }}
+    </div>
+    <div class="mb-1">
+      <label  class="form-label"> Profilepic :</label>
+      {{ form.profilepic }} 
     </div>
     <div class="mb-1">
       <label  class="form-label">Choose Password :</label>

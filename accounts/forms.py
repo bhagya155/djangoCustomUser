@@ -76,7 +76,13 @@ class SignUpForm(UserCreationForm):
             }
         )
     )
+    profilepic = forms.ImageField(
+        widget = forms.FileInput(
+            attrs = {"id" : "image_field" , # you can access your image field with this id for css styling . 
+                    }
+            )
+    )
 
     class Meta:
         model = User
-        fields = ('username','address','first_name','last_name', 'email', 'password1', 'password2', 'is_doctor', 'is_patient')
+        fields = ('username','address','profilepic','first_name','last_name', 'email', 'password1', 'password2', 'is_doctor', 'is_patient')
