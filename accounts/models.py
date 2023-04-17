@@ -9,7 +9,9 @@ class User(AbstractUser):
     is_doctor = models.BooleanField('Is doctor',default=False)
     is_patient = models.BooleanField('Is patient',default=False)
 
-    address = models.CharField(max_length=150)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    pincode = models.CharField(max_length=10)
 
     profilepic = models.ImageField(upload_to="images")
 

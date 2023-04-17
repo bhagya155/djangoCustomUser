@@ -68,11 +68,27 @@ class SignUpForm(UserCreationForm):
             }
         )
     )
-    address = forms.CharField(
+    city = forms.CharField(
         widget=forms.TextInput(
             attrs={
                 "class": "form-control",
-                "placeholder": "Enter City , state and pincode"
+                "placeholder": "Enter City"
+            }
+        )
+    )
+    state = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "Enter state "
+            }
+        )
+    )
+    pincode = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control",
+                "placeholder": "pincode"
             }
         )
     )
@@ -85,4 +101,4 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username','address','profilepic','first_name','last_name', 'email', 'password1', 'password2', 'is_doctor', 'is_patient')
+        fields = ('username','city','state','pincode','profilepic','first_name','last_name', 'email', 'password1', 'password2', 'is_doctor', 'is_patient')

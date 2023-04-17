@@ -37,6 +37,21 @@
       <label  class="form-label"> Profilepic :</label>
       {{ form.profilepic }} 
     </div>
+    <label for="address" class="form-label"> Address :</label>
+    <div class="mb-3 row g-3" id="address">
+      <div class="col-auto">
+      <label for="city" class="form-label">City :</label>
+      {{ form.city }}
+      </div>
+      <div class="col-auto">
+      <label for="state" class="form-label">State :</label>
+      {{ form.state }}
+      </div>
+      <div class="col-auto">
+        <label for="pincode" class="form-label">Pincode :</label>
+        {{ form.pincode }}
+      </div>
+    </div>
     <div class="mb-1">
       <label  class="form-label">Choose Password :</label>
       {{ form.password1 }}
